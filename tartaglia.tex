@@ -17,29 +17,29 @@
 }
 
 %creazione del comando ``Binomio di Newton''
-	\newcommand{\newton}[1]{%
-		\stepcounter{newton}%
-		\setcounter{i}{1}%
-		\setcounter{j}{0}%
-		\setcounter{n}{#1}%
-			\begin{center}
-			\begin{tikzpicture}[node distance=15 mm]
-				\node (\thenewton_n0_0){$\displaystyle\binom{0}{0}$};
-				\whiledo{\thei<\then}{%
-				\setcounter{I}{\thei}%
-				\addtocounter{I}{-1}%
-					\whiledo{\thej<\thei}{%
-						\setcounter{J}{\thei}%
-						\addtocounter{J}{-1}%
-							\node[below left of=\thenewton_n\theI_\thej](\thenewton_n\thei_\thej){$\displaystyle\binom{\thei}{\thej}$};
-							\stepcounter{j}%
-						}
-					\node[below right of=\thenewton_n\theI_\theJ](\thenewton_n\thei_\thej){$\displaystyle\binom{\thei}{\thej}$};
-					\stepcounter{i}%
-					\setcounter{j}{0}%
-				}
-			\end{tikzpicture}
-			\end{center}
+\newcommand{\newton}[1]{%
+	\stepcounter{newton}%
+	\setcounter{i}{1}%
+	\setcounter{j}{0}%
+	\setcounter{n}{#1}%
+		\begin{center}
+		\begin{tikzpicture}[node distance=15 mm]
+			\node (\thenewton_n0_0){$\displaystyle\binom{0}{0}$};
+			\whiledo{\thei<\then}{%
+			\setcounter{I}{\thei}%
+			\addtocounter{I}{-1}%
+				\whiledo{\thej<\thei}{%
+					\setcounter{J}{\thei}%
+					\addtocounter{J}{-1}%
+						\node[below left of=\thenewton_n\theI_\thej](\thenewton_n\thei_\thej){$\displaystyle\binom{\thei}{\thej}$};
+						\stepcounter{j}%
+					}
+				\node[below right of=\thenewton_n\theI_\theJ](\thenewton_n\thei_\thej){$\displaystyle\binom{\thei}{\thej}$};
+				\stepcounter{i}%
+				\setcounter{j}{0}%
+			}
+		\end{tikzpicture}
+		\end{center}
 }
 	
 %creazione del comando ``Triangolo di Tartaglia''
