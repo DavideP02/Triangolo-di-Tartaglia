@@ -13,4 +13,4 @@ Il comando
 
 \newton{arg1}
 
-genera un triangolo di tartaglia fatto di coefficienti binomiali di _arg1_ righe.
+genera un triangolo di tartaglia formato da coefficienti binomiali di _arg1_ righe.
